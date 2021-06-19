@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.isight">
+
+    <uses-sdk />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ObjectDetection">
+
+        <meta-data
+            android:name="com.here.sdk.access_key_id"
+            android:value="3vgAlAXkuqOtKj9nH1YpEQ" />
+        <meta-data
+            android:name="com.here.sdk.access_key_secret"
+            android:value="lue0KFGT4YrrNcTRtXUM-Q9W2R5KqpKWTlrFuedNnsej4h_fl6d8ymZ3cEw3c1aA8DG_ogySEc8hRAGggr4H5Q" />
+
+        <activity
+            android:name=".DetectorActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
